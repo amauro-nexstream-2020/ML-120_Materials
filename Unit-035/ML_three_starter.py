@@ -44,6 +44,14 @@ model.fit(training_data, target_data, epochs=1000)
 
 
 # Step 6: Output unrounded and rounded predictions of the model
-print("Model's Unrounded Prediction: \n" + model.predict(training_data))
-print("Model's Rounded Prediction: \n" + model.predict(training_data).round())
+pred = model.predict(training_data).round()
+
+print("Model's Unrounded Prediction: \n" + pred)
+print("Model's Rounded Prediction: \n" + pred.round())
 print("Model's Target Data: \n" + target_data)
+
+comparison = pred.round == target_data
+if(comparison.all()):
+   print('The model is correct!')
+else:
+   print('The model is not correct!')

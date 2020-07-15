@@ -55,7 +55,7 @@ while(playing):
 
 # Step 2: Making sure that the user inputted a correct value
   if(userInput < 0 or userInput > 4):
-    print("Please input 0, 1, or 2.")
+    print("Please input 0, 1, 2, 3, or 4.")
     continue
 
 # Step 3: TODO: Finish the statement below, using a method from Python's random API. computerInput should be between 0 and 2.
