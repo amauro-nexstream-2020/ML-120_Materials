@@ -50,7 +50,7 @@ print("Model's Unrounded Prediction: \n" + str(pred))
 print("Model's Rounded Prediction: \n" + str(pred.round()))
 print("Model's Target Data: \n" + str(target_data))
 
-comparison = pred.round == target_data
+comparison = pred.round() == target_data
 if(comparison.all()):
    print('The model is correct!')
 else:
